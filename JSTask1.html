@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task One JS</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 300px;
+        margin: 20px auto;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+      }
+
+      td input {
+        width: 80%;
+        padding: 5px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <table>
+        <tr>
+          <td><label for="number">Enter a Number</label></td>
+          <td>
+            <input type="text" id="number" placeholder="Enter Number" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="reverse">Reversed number is</label></td>
+          <td><input type="text" id="reverse" /></td>
+        </tr>
+      </table>
+      <button onclick="reverseNumber()">Reverse</button>
+    </center>
+
+    <script>
+      function reverseNumber() {
+        let numberInput = document.getElementById("number").value;
+        let number = parseInt(numberInput);
+        if (!isNaN(number)) {
+          let result = 0;
+
+          while (number > 0) {
+            let rightmost = number % 10;
+            result = result * 10 + rightmost;
+            number = Math.floor(number / 10);
+          }
+          document.getElementById("reverse").value = result;
+        } else {
+          alert("Please enter a valid number.");
+        }
+      }
+    </script>
+  </body>
+</html>
