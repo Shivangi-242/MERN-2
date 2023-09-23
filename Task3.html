@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Three Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+      }
+      .card {
+        margin: 20px;
+        width: 230px;
+      }
+      .card-title {
+        display: block;
+        background-color: rgb(247, 247, 247);
+        height: 35px;
+        padding: 5px;
+      }
+      p {
+        margin: 0%;
+        padding: 0%;
+      }
+      .card:hover {
+        background-color: rgb(245, 245, 245);
+        transform: scale(1.1);
+        transition: 0.4s;
+        cursor: pointer;
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .footer {
+        padding: 20px 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar bg-light">
+      <div class="navbar-brand">
+        <a href="#" class="nav-link text-dark">Company Name</a>
+      </div>
+      <div class="navbar me-3">
+        <a href="#" class="nav-link text-dark">Features</a>
+        <a href="#" class="nav-link text-dark">Enterprise</a>
+        <a href="#" class="nav-link text-dark">Support</a>
+        <a href="#" class="nav-link text-dark">Pricing</a>
+        <button type="button" class="btn btn-outline-primary">Sign Up</button>
+      </div>
+    </nav>
+
+    <section class="container">
+      <p class="lead text-center display-5">Pricing</p>
+      <p class="text-center">
+        Quickly build an effective pricing table for your potential customers
+        with this Bootstrap example. It's built with default Bootstrap
+        components and utilities with little customization.
+      </p>
+      <div class="card col-2 text-center">
+        <p class="card-title h5">Free</p>
+        <p class="">
+          <big><b class="h3">$0</b>/mo</big>
+        </p>
+        <p>10 users included</p>
+        <p>2 GB of storage</p>
+        <p>Email support</p>
+        <p>Help center access</p>
+        <button class="btn btn-outline-primary m-4">Sign up for free</button>
+      </div>
+
+      <div class="card col-2 text-center">
+        <p class="card-title h5">Pro</p>
+        <p class="">
+          <big><b class="h3">$15</b>/mo</big>
+        </p>
+        <p>20 users included</p>
+        <p>10 GB of storage</p>
+        <p>Priority Email support</p>
+        <p>Help center access</p>
+        <button class="btn btn-primary m-4">Get started</button>
+      </div>
+
+      <div class="card col-2 text-center">
+        <p class="card-title h5">Enterprise</p>
+        <p class="">
+          <big><b class="h3">$29</b>/mo</big>
+        </p>
+        <p>30 users included</p>
+        <p>15 GB of storage</p>
+        <p>Phone and email support</p>
+        <p>Help center access</p>
+        <button class="btn btn-primary m-4">Contact us</button>
+      </div>
+    </section>
+  </body>
+  <footer class="bg-light">
+    <div class="row">
+      <div class="footer col-12 col-lg-3">
+        <i class="fa-brands fa-bootstrap"></i>
+        <p>&copy; 2017</p>
+      </div>
+
+      <div class="footer col-12 col-lg-3">
+        <p class="h5">Features</p>
+        <p>Cool stuff</p>
+        <p>Random feature</p>
+        <p>Team feature</p>
+      </div>
+
+      <div class="footer col-12 col-lg-3">
+        <p class="h5">Resources</p>
+        <p>Resource</p>
+        <p>Resource name</p>
+        <p>Another resource</p>
+      </div>
+
+      <div class="footer col-12 col-lg-3">
+        <p class="h5">About</p>
+        <p>Team</p>
+        <p>Location</p>
+        <p>Privacy</p>
+      </div>
+    </div>
+  </footer>
+</html>
