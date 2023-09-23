@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Two JavaScript</title>
+    <style>
+      td {
+        padding: 10px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <table>
+        <tr>
+          <td><label for="string">Enter a String</label></td>
+          <td>
+            <input type="text" id="string" placeholder="Enter String" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="reverse">Reversed string is</label></td>
+          <td><input type="text" id="reverse" /></td>
+        </tr>
+      </table>
+      <button onclick="reverseString()">Reverse</button>
+    </center>
+
+    <script>
+      function reverseString() {
+        let str = document.getElementById("string").value;
+        let result = "";
+
+        if (isNaN(str)) {
+          result = str.split("").reverse().join("");
+          document.getElementById("reverse").value = result;
+        } else {
+          alert("Please enter a valid string.");
+        }
+      }
+    </script>
+  </body>
+</html>
