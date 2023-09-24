@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Two Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .rows {
+        display: flex;
+        padding: 10px;
+      }
+      strong {
+        font-weight: 700;
+        font-size: 50px;
+      }
+      .navbar a:hover {
+        display: block;
+        background-color: #ffc107;
+        color: black !important;
+        transform: scale(1.2);
+        transition: 0.5s;
+      }
+      .background-image {
+        background-image: url("./carousel-1.jpg"); /* Replace with your image path */
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+      .centered-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+      .centered-text h1 {
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .centered-text p {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div class="container-fluid bg-warning">
+        <div class="navbar">
+          <div class="navbar-brand">
+            <p class="ps-5 pe-0 h1"><strong>Builderz</strong></p>
+          </div>
+          <div class="nav">
+            <div class="rows">
+              <div class="top-bar-text px-5">
+                <p class="h5">Opening Hour</p>
+                <p>Mon - Fri, 8:00 - 9:00</p>
+              </div>
+              <div class="top-bar-text px-5">
+                <p class="h5">Call Us</p>
+                <p>+012 345 6789</p>
+              </div>
+              <div class="top-bar-text px-5">
+                <p class="h5">Email Us</p>
+                <p>info@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar bg-dark">
+          <div class="container-fluid">
+            <div class="nav px-5">
+              <a href="#" class="nav-item nav-link text-light">HOME</a>
+              <a href="#" class="nav-item nav-link text-light">ABOUT</a>
+              <a href="#" class="nav-item nav-link text-light">SERVICE</a>
+              <a href="#" class="nav-item nav-link text-light">TEAM</a>
+              <a href="#" class="nav-item nav-link text-light">PROJECT</a>
+              <a href="#" class="nav-item nav-link text-light">PAGE</a>
+              <a href="#" class="nav-item nav-link text-light">CONTACT</a>
+            </div>
+            <div class="nav m-3 px-5">
+              <a class="btn btn-outline-light" href="#">Get A Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background-image">
+      <div class="centered-text">
+        <p>We are professional.</p>
+        <h1>For Your Dream Project</h1>
+        <div class="m-3 px-5">
+          <a class="btn btn-outline-light" href="#">Get A Quote</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-4 col-md-12 bg-dark text-warning">
+          <div class="footer p-5">
+            <h3>Expert Worker</h3>
+            <p>
+              Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit
+              non
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 bg-warning text-dark">
+          <div class="footer p-5">
+            <h3>Quality Work</h3>
+            <p>
+              Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit
+              non
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 bg-dark text-warning">
+          <div class="footer p-5">
+            <h3>24/7 Support</h3>
+            <p>
+              Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit
+              non
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>
