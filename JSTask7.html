@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Seven JavaScript</title>
+    <style>
+      @keyframes moveImage {
+        0% {
+          transform: translateX(0px);
+        }
+        50% {
+          transform: translateX(500px);
+        }
+        100% {
+          transform: translateX(1000px);
+        }
+      }
+      .container {
+        width: 100%;
+        display: block;
+        margin-top: 20%;
+        text-align: center;
+      }
+
+      .moving-image {
+        width: 280px;
+        height: 150px;
+        background-image: url("./img3.png");
+        background-size: contain;
+        animation: moveImage 4s linear infinite;
+      }
+
+      .button-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      button {
+        margin: 0 10px;
+        padding: 10px;
+        background-color: greenyellow;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="moving-image"></div>
+
+      <div>
+        <h1>Click the following buttons to handle animation</h1>
+      </div>
+      <div class="button-container">
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+      </div>
+    </div>
+
+    <script>
+      const image = document.querySelector(".moving-image");
+      const startButton = document.getElementById("startButton");
+      const stopButton = document.getElementById("stopButton");
+
+      function startAnimation() {
+        image.style.animationPlayState = "running";
+      }
+
+      function stopAnimation() {
+        image.style.animationPlayState = "paused";
+      }
+
+      startButton.addEventListener("click", startAnimation);
+      stopButton.addEventListener("click", stopAnimation);
+    </script>
+  </body>
+</html>

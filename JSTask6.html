@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta "viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Six JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .instagram p {
+        font-style: oblique;
+        font-size: xx-large;
+        text-align: center;
+      }
+
+      .instagram-login {
+        background-color: rgb(240, 240, 240);
+        max-width: 400px;
+        min-width: 300px;
+        padding: 20px;
+      }
+      .input-container {
+        display: flex;
+        padding: 10px;
+      }
+      .icon-container {
+        display: flex;
+      }
+      .icon {
+        width: 40px;
+        padding: 5%;
+        border: 1px solid rgb(202, 202, 202);
+        background-color: rgb(240, 240, 240);
+        border-radius: 5px;
+        text-align: center;
+        justify-content: center;
+      }
+      .password-option {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+      }
+      .password-option a {
+        display: block;
+        margin-left: 20px;
+        color: #3897f0;
+        text-decoration: none;
+        text-align: right;
+      }
+      .password-option label {
+        display: block;
+        margin-right: 20px;
+        text-align: left;
+      }
+      .signup-link {
+        padding: 10px;
+      }
+      .signup-link a {
+        color: #3897f0;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="instagram-login">
+        <div class="instagram">
+          <p>Instagram</p>
+        </div>
+        <div>
+          <form action="">
+            <div class="input-container">
+              <i class="fa-solid fa-user icon"></i>
+              <input
+                onkeyup="checkName()"
+                type="text"
+                id="username"
+                class="form-control"
+                placeholder="Username"
+              />
+            </div>
+            <div>
+              <span id="msg1" style="color: red"></span>
+            </div>
+            <div class="input-container">
+              <i class="fa-solid fa-lock icon"></i>
+              <input
+                onkeyup="checkPass()"
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Password"
+              />
+            </div>
+            <div>
+              <span id="msg2" style="color: red; text-align: center"></span>
+            </div>
+            <div class="input-container">
+              <button type="submit" class="btn btn-primary form-control">
+                Log In
+              </button>
+            </div>
+            <div class="password-option">
+              <label for=""><input type="checkbox" id="" />Remember me</label>
+              <a href="https://www.instagram.com/accounts/password/reset/?hl=en"
+                >Forgot Password?</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="signup-link">
+        <p>
+          Don't have an account?
+          <a href="https://www.instagram.com/accounts/emailsignup/?hl=en"
+            >Sign up here.</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function checkName() {
+        let name = document.getElementById("username").value;
+        const passRegex = /^[a-zA-Z][a-zA-Z0-9]*$/;
+
+        if (name === " " || name === "") {
+          document.getElementById("msg1").innerHTML = "This field is required.";
+          document.getElementById("username").style.borderColor = "red";
+        } else if (!passRegex.test(name)) {
+          document.getElementById("msg1").innerHTML = "Username must be valid.";
+          document.getElementById("username").style.borderColor = "red";
+        } else {
+          document.getElementById("msg1").innerHTML = " ";
+          document.getElementById("username").style.borderColor = "green";
+        }
+      }
+
+      function checkPass() {
+        let pass = document.getElementById("password").value;
+
+        if (pass == "" || pass == " ") {
+          document.getElementById("msg2").innerHTML = "This field is required.";
+          document.getElementById("password").style.borderColor = "red";
+        } else if (pass.length < 6) {
+          document.getElementById("msg2").innerHTML =
+            "Password must include 6 characters.";
+          document.getElementById("password").style.borderColor = "red";
+        } else {
+          document.getElementById("msg2").innerHTML = " ";
+          document.getElementById("password").style.borderColor = "green";
+        }
+      } //
+      //
+    </script>
+  </body>
+</html>
