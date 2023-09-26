@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Four JavaScript</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button onclick="showDate()">Show Date</button>
+      <p id="output1"></p>
+      <br />
+      <button onclick="showTime()">Show Time</button>
+      <p id="output2"></p>
+      <br />
+    </div>
+
+    <script>
+      function showDate() {
+        const currentDate = new Date();
+        const formattedDate = currentDate.toDateString();
+        document.getElementById("output1").innerHTML =
+          "Current Date: " + formattedDate;
+      }
+
+      function showTime() {
+        const currentTime = new Date();
+        const formattedTime = currentTime.toGMTString();
+        document.getElementById("output2").innerHTML =
+          "Current Time: " + formattedTime + "+5:30 (Indian Standard Time)";
+      }
+    </script>
+  </body>
+</html>
